@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class StudentMarks {
+    public static void main(String[] args) {
+        // Create a scanner object to read input
+        Scanner scanner = new Scanner(System.in);
+
+        // Declare variables to store marks for five units
+        double unit1, unit2, unit3, unit4, unit5;
+        
+        // Ask the student to enter marks for the five units
+        System.out.println("Please enter the marks for the five units:");
+
+        System.out.print("Marks for Unit 1: ");
+        unit1 = scanner.nextDouble();
+        
+        System.out.print("Marks for Unit 2: ");
+        unit2 = scanner.nextDouble();
+        
+        System.out.print("Marks for Unit 3: ");
+        unit3 = scanner.nextDouble();
+        
+        System.out.print("Marks for Unit 4: ");
+        unit4 = scanner.nextDouble();
+        
+        System.out.print("Marks for Unit 5: ");
+        unit5 = scanner.nextDouble();
+        
+        // Compute the average
+        double average = (unit1 + unit2 + unit3 + unit4 + unit5) / 5.0;
+        
+        // Display the average, formatted to two decimal places
+        System.out.printf("Your average marks for the five units is: %.2f%n", average);
+        
+        // Close the scanner
+        scanner.close();
+    }
+}

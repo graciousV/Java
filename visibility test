@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class DivisibilityTest {
+    public static void main(String[] args) {
+        // Create a scanner object to read input
+        Scanner scanner = new Scanner(System.in);
+
+        // Ask the user to enter an integer
+        System.out.print("Please enter an integer: ");
+        int number = scanner.nextInt();
+
+        // Loop through divisors 1 to 9 (since 0 cannot divide any number)
+        for (int divisor = 1; divisor <= 9; divisor++) {
+            if (number % divisor == 0) {
+                // If divisible, print the result
+                System.out.println("The number " + number + " is divisible by " + divisor + ".");
+            }
+        }
+
+        // Special checks for divisibility by 5 based on the last digit
+        int lastDigit = number % 10;  // Get the last digit of the number
+        if (lastDigit == 0 || lastDigit == 5) {
+            if (lastDigit == 0) {
+                System.out.println("The number " + number + " is divisible by 5 because it ends with a 0.");
+            } else if (lastDigit == 5) {
+                System.out.println("The number " + number + " is divisible by 5 because it ends with a 5.");
+            }
+        }
+
